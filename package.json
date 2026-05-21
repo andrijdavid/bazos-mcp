@@ -1,0 +1,55 @@
+{
+  "name": "@andrijdavid/bazos-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for interacting with Bazos.cz and Bazos.sk",
+  "keywords": [
+    "mcp",
+    "bazos",
+    "classifieds",
+    "cz",
+    "sk"
+  ],
+  "author": "Andrij David <andrijdavid@gmail.com>",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrijdavid/bazos-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrijdavid/bazos-mcp/issues"
+  },
+  "homepage": "https://github.com/andrijdavid/bazos-mcp#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "bazos-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "lint": "eslint src tests",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
