@@ -19,8 +19,8 @@ describe('BazosClient', () => {
   });
 
   it('applies rate limiting between requests', async () => {
-    const fetchSpy = vi.spyOn(global, 'fetch').mockResolvedValue(
-      new Response(JSON.stringify([{ id: '1' }]), { status: 200 })
+    const fetchSpy = vi.spyOn(global, 'fetch').mockImplementation(() =>
+      Promise.resolve(new Response(JSON.stringify([{ id: '1' }]), { status: 200 }))
     );
 
     // First request should go immediately (no previous request)
