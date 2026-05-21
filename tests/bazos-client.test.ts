@@ -53,8 +53,8 @@ describe('BazosClient', () => {
     await client.searchAds('cz', {});
 
     const call = fetchSpy.mock.calls[0];
-    const init = call[1] as RequestInit;
-    const headers = init.headers as Record<string, string>;
+    const init = call[1] as { headers?: Record<string, string> };
+    const headers = init.headers ?? {};
 
     expect(headers['user-agent']).toContain('bazos');
     expect(headers['x-deviceid']).toMatch(/^\d{8}$/);
