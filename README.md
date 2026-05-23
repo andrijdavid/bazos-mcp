@@ -1,13 +1,14 @@
-# @andrijdavid/bazos-mcp
+# Bazos-MCP
 
-MCP server for interacting with [Bazos.cz](https://www.bazos.cz) and [Bazos.sk](https://www.bazos.sk) classifieds.
+MCP server for interacting with [Bazos.cz](https://www.bazos.cz) and [Bazos.sk](https://www.bazos.sk).
+
+
 
 ## Features
 
 - Search ads across all sections on both Czech and Slovak Bazos.
 - Retrieve detailed ad information.
 - Fetch user ratings by phone/email ID.
-- Built-in evasion: randomised user agents, device IDs, and request jitter to avoid detection.
 
 ## Installation
 
@@ -90,6 +91,10 @@ Arguments:
 | VS | Vstupenky |
 | ZV | Zvirata |
 | OS | Ostatni |
+
+## Disclaimer
+
+This project is not affiliated with or endorsed by Bazos.cz or Bazos.sk. The author is not responsible for any consequences arising from use of this software. The code is provided "as is", without warranty of any kind.
 
 ## License
 
