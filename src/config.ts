@@ -4,6 +4,8 @@
 export const DOMAINS = {
   cz: 'https://www.bazos.cz',
   sk: 'https://www.bazos.sk',
+  at: 'https://www.bazos.at',
+  pl: 'https://www.bazos.pl',
 } as const;
 
 export type Domain = keyof typeof DOMAINS;

@@ -39,15 +39,15 @@ export function createServer(): Server {
         {
           name: 'search_ads',
           description:
-            'Search ads on Bazos.cz or Bazos.sk. ' +
+            'Search ads on Bazos.cz, Bazos.sk, Bazos.at, or Bazos.pl. ' +
             'Returns a list of ads matching the criteria.',
           inputSchema: {
             type: 'object',
             properties: {
               domain: {
                 type: 'string',
-                enum: ['cz', 'sk'],
-                description: 'Domain to search: cz or sk',
+                enum: ['cz', 'sk', 'at', 'pl'],
+                description: 'Domain to search: cz, sk, at, or pl',
               },
               section: {
                 type: 'string',
@@ -97,8 +97,8 @@ export function createServer(): Server {
             properties: {
               domain: {
                 type: 'string',
-                enum: ['cz', 'sk'],
-                description: 'Domain: cz or sk',
+                enum: ['cz', 'sk', 'at', 'pl'],
+                description: 'Domain: cz, sk, at, or pl',
               },
               ad_id: {
                 type: 'string',
@@ -116,8 +116,8 @@ export function createServer(): Server {
             properties: {
               domain: {
                 type: 'string',
-                enum: ['cz', 'sk'],
-                description: 'Domain: cz or sk',
+                enum: ['cz', 'sk', 'at', 'pl'],
+                description: 'Domain: cz, sk, at, or pl',
               },
               phone: {
                 type: 'string',
@@ -159,12 +159,12 @@ export function createServer(): Server {
         const offset = args?.offset as number | undefined;
         const limit = args?.limit as number | undefined;
 
-        if (!domain || (domain !== 'cz' && domain !== 'sk')) {
+        if (!domain || !['cz', 'sk', 'at', 'pl'].includes(domain)) {
           return {
             content: [
               {
                 type: 'text',
-                text: 'Invalid domain. Use "cz" or "sk".',
+                text: 'Invalid domain. Use "cz", "sk", "at", or "pl".',
               },
             ],
             isError: true,
@@ -204,12 +204,12 @@ export function createServer(): Server {
         const domain = (args?.domain as string) as Domain;
         const adId = args?.ad_id as string;
 
-        if (!domain || (domain !== 'cz' && domain !== 'sk')) {
+        if (!domain || !['cz', 'sk', 'at', 'pl'].includes(domain)) {
           return {
             content: [
               {
                 type: 'text',
-                text: 'Invalid domain. Use "cz" or "sk".',
+                text: 'Invalid domain. Use "cz", "sk", "at", or "pl".',
               },
             ],
             isError: true,
@@ -246,12 +246,12 @@ export function createServer(): Server {
         const offset = args?.offset as number | undefined;
         const limit = args?.limit as number | undefined;
 
-        if (!domain || (domain !== 'cz' && domain !== 'sk')) {
+        if (!domain || !['cz', 'sk', 'at', 'pl'].includes(domain)) {
           return {
             content: [
               {
                 type: 'text',
-                text: 'Invalid domain. Use "cz" or "sk".',
+                text: 'Invalid domain. Use "cz", "sk", "at", or "pl".',
               },
             ],
             isError: true,

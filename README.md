@@ -1,12 +1,12 @@
 # Bazos-MCP
 
-MCP server for interacting with [Bazos.cz](https://www.bazos.cz) and [Bazos.sk](https://www.bazos.sk).
+MCP server for interacting with [Bazos.cz](https://www.bazos.cz), [Bazos.sk](https://www.bazos.sk), [Bazos.at](https://www.bazos.at), and [Bazos.pl](https://www.bazos.pl).
 
 
 
 ## Features
 
-- Search ads across all sections on both Czech and Slovak Bazos.
+- Search ads across all sections on Czech, Slovak, Austrian, and Polish Bazos.
 - Retrieve detailed ad information.
 - Fetch user ratings by phone/email ID.
 
@@ -38,7 +38,7 @@ Add to your MCP client configuration (e.g. Claude Desktop):
 Search ads with filters.
 
 Arguments:
-- `domain`: `"cz"` or `"sk"`
+- `domain`: `"cz"`, `"sk"`, `"at"`, or `"pl"`
 - `section`: Section code (e.g. `AU` for Auto)
 - `query`: Search query string
 - `price_from`: Minimum price
@@ -53,7 +53,7 @@ Arguments:
 Get full details for an ad.
 
 Arguments:
-- `domain`: `"cz"` or `"sk"`
+- `domain`: `"cz"`, `"sk"`, `"at"`, or `"pl"`
 - `ad_id`: The ad ID
 
 ### get_user_ratings
@@ -61,7 +61,7 @@ Arguments:
 Get user ratings.
 
 Arguments:
-- `domain`: `"cz"` or `"sk"`
+- `domain`: `"cz"`, `"sk"`, `"at"`, or `"pl"`
 - `phone`: Phone ID
 - `email`: Email ID
 - `offset`: Pagination offset
@@ -94,7 +94,7 @@ Arguments:
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by Bazos.cz or Bazos.sk. The author is not responsible for any consequences arising from use of this software. The code is provided "as is", without warranty of any kind.
+This project is not affiliated with or endorsed by Bazos.cz, Bazos.sk, Bazos.at, or Bazos.pl. The author is not responsible for any consequences arising from use of this software. The code is provided "as is", without warranty of any kind.
 
 ## License
 

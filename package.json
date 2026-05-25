@@ -2,13 +2,15 @@
   "name": "@andrijdavid/bazos-mcp",
   "version": "0.1.2",
   "mcpName": "io.github.andrijdavid/bazos-mcp",
-  "description": "MCP server for interacting with Bazos.cz and Bazos.sk",
+  "description": "MCP server for interacting with Bazos.cz, Bazos.sk, Bazos.at, and Bazos.pl",
   "keywords": [
     "mcp",
     "bazos",
     "classifieds",
     "cz",
-    "sk"
+    "sk",
+    "at",
+    "pl"
   ],
   "author": "Andrij David <andrijdavid@gmail.com>",
   "license": "AGPL-3.0",

@@ -16,6 +16,8 @@ describe('BazosClient', () => {
   it('getBaseUrl returns correct domain URLs', () => {
     expect(client.getBaseUrl('cz')).toBe('https://www.bazos.cz');
     expect(client.getBaseUrl('sk')).toBe('https://www.bazos.sk');
+    expect(client.getBaseUrl('at')).toBe('https://www.bazos.at');
+    expect(client.getBaseUrl('pl')).toBe('https://www.bazos.pl');
   });
 
   it('applies rate limiting between requests', async () => {
