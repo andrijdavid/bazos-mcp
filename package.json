@@ -1,6 +1,6 @@
 {
   "name": "@andrijdavid/bazos-mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "mcpName": "io.github.andrijdavid/bazos-mcp",
   "description": "MCP server for interacting with Bazos.cz, Bazos.sk, Bazos.at, and Bazos.pl",
   "keywords": [

@@ -42,6 +42,9 @@ jobs:
   build-and-publish:
     needs: [lint, test, typecheck]
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -49,8 +52,8 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
           cache: 'npm'
+      # trusted publishing (OIDC) needs npm >= 11.5.1, newer than what node 20 ships
+      - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run build
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

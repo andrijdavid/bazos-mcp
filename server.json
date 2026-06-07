@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.andrijdavid/bazos-mcp",
-  "description": "MCP server for interacting with Bazos.cz and Bazos.sk",
+  "description": "MCP server for interacting with Bazos.cz, Bazos.sk, Bazos.at, and Bazos.pl",
   "repository": {
     "url": "https://github.com/andrijdavid/bazos-mcp",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.1.3",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@andrijdavid/bazos-mcp",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "transport": {
         "type": "stdio"
       }

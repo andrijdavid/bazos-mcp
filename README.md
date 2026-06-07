@@ -1,5 +1,11 @@
 # Bazos-MCP
 
+[![npm version](https://img.shields.io/npm/v/@andrijdavid/bazos-mcp.svg)](https://www.npmjs.com/package/@andrijdavid/bazos-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/@andrijdavid/bazos-mcp.svg)](https://www.npmjs.com/package/@andrijdavid/bazos-mcp)
+[![License: AGPL-3.0](https://img.shields.io/npm/l/@andrijdavid/bazos-mcp.svg)](./LICENSE)
+[![Release](https://github.com/andrijdavid/bazos-mcp/actions/workflows/release.yml/badge.svg)](https://github.com/andrijdavid/bazos-mcp/actions/workflows/release.yml)
+[![Node.js](https://img.shields.io/node/v/@andrijdavid/bazos-mcp.svg)](https://nodejs.org)
+
 MCP server for interacting with [Bazos.cz](https://www.bazos.cz), [Bazos.sk](https://www.bazos.sk), [Bazos.at](https://www.bazos.at), and [Bazos.pl](https://www.bazos.pl).
 
 
