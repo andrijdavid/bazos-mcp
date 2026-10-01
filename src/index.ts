@@ -18,9 +18,25 @@ export {
   isValidSort,
 } from './utils.js';
 
+import { realpathSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
+
 import { startServer } from './tools.js';
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// ponytail: npm installs bin as a symlink, so argv[1] is the link path while
+// import.meta.url is the realpath. realpath + pathToFileURL also covers spaces,
+// non-ASCII paths and Windows.
+function isMainModule(): boolean {
+  const entry = process.argv[1];
+  if (!entry) return false;
+  try {
+    return import.meta.url === pathToFileURL(realpathSync(entry)).href;
+  } catch {
+    return false;
+  }
+}
+
+if (isMainModule()) {
   startServer().catch((error) => {
     console.error('Fatal error starting server:', error);
     process.exit(1);

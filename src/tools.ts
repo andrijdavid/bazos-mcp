@@ -24,7 +24,7 @@ export function createServer(): Server {
   const server = new Server(
     {
       name: '@andrijdavid/bazos-mcp',
-      version: '0.1.0',
+      version: '0.1.3',
     },
     {
       capabilities: {
